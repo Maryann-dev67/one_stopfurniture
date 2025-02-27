@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Details</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+       <div class="container">
+        <form class="sign-up-form">
+            <h2>Order form</h2>
+            <div class="form-group">
+                <label for="Order Number">Order Number: </label>
+                <input type="text" id="Order Number" name="Order Number"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Order date">Order date:</label>
+                <input type="date" id="Order date" name="Order date"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Shipping address">Shipping address:</label>
+                <input type="text" id="Shipping address" name="Shipping address"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Customer's address">Customer's address:</label>
+                <input type="text" id="Customer's address" name="Customer's address"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Tracking number">Tracking number:</label>
+                <input type="text" id="Tracking number" name="Tracking number"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Product name">Product name:</label>
+                <input type="text" id="Product name" name="Product name"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Quantity">Quantity:</label>
+                <input type="text" id="Quantity" name="Quantity"><br><br>
+            </div>
+            <div class="form-group">
+                <label for="Price">Price:</label>
+                <input type="text" id="Price" name="Price"><br><br>
+            </div>           
+           <div class="btn-field"> 
+            <button type="submit" id="signupBtn">Place order</button>
+        </div>         
+        </form>
+       </div>
+       <script>
+        let signupBtn =document.getElementById("signupBtn");
+        let nameField =document.getElementById("nameField");
+        let title =document.getElementById("title");
+
+        signupBtn.onclick =function(){
+            nameField.style.maxheight='60px';
+            title.innerHTML="Sign Up"
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+    <link rel="stylesheet" href="address.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">OneStop Furniture</a>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="Payment Method.html" class="navbar__links">Payment details</a>
+            </li>
+            <li class="navbar__item">
+                <a href="Categories.html" class="navbar__links">Products</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="main__container">
+    <form action="ainsert.php" method="POST" class="form" id="addressForm">
+        <div class="h1">
+            <h1>Address Book</h1>
+        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Somalia">Somalia</option>
+            <option value="Chad">Chad</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Comoros">Comoros</option>
+        </select><br><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br><br>
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <input type="submit" class="button" value="Submit">
+    </form>
+    <div class="main__img--container">
+        <img src="address.svg" id="main__img">
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('addressForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const country = document.getElementById('country').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipcode = document.getElementById('zipcode').value;
+            const address = document.getElementById('address').value;
+
+            // Perform basic validation
+            if (name.trim() === '') {
+                alert('Please enter a name.');
+                return;
+            }
+
+            if (country.trim() === '') {
+                alert('Please select a country.');
+                return;
+            }
+
+            if (city.trim() === '') {
+                alert('Please enter a city.');
+                return;
+            }
+
+            // Confirm submission with the user
+            if (confirm('Are you sure you want to submit the form?')) {
+                // Submit the form
+                form.submit();
+            }
+        });
+    });
+</script>
+</body>
+</html>

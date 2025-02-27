@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css"> 
+</head>
+<body>
+	<nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">OneStop</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Cart</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="Categories.html" class="navbar__links">Products</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="login.svg" class="button">Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <!-- Cart items will be populated here using JavaScript -->
+                <h1>Cart Totals</h1>
+                <ul>
+                    <li>Subtotal: <span id="subtotal">ksh0.00</span></li>
+                    <li>Tax: <span id="tax">ksh0.00</span></li>
+                    <li>Total: <span id="total">ksh0.00</span></li>
+                </ul>
+               <button class="main__btn"><a href="/">Checkout</a></button>
+            </div>
+            <class class="main__img--container">
+                <img src="cart.svg"  id="main__img">
+            </class>
+        </div>
+    </div>
+</body>                         
